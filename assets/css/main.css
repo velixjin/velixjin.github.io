@@ -135,9 +135,17 @@ h2 {
 .news li,
 .rows li {
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
+  grid-template-columns: var(--date-column-width, 110px) minmax(0, 1fr);
   gap: 16px;
   padding: 5px 0;
+}
+
+#experience {
+  --date-column-width: 8.5rem;
+}
+
+#experience .date {
+  white-space: nowrap;
 }
 
 .date {
